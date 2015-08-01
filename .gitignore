@@ -2,4 +2,5 @@
 *.log
 *.dvi
 *.out
+*.swp
 contactinfo.tex
