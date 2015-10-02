@@ -1,7 +1,7 @@
 NAME := KelvinLy
 TEX := pdflatex
 
-all: software hardware both
+all: software hardware both ti
 
 clean:
 	rm *.pdf
@@ -21,4 +21,7 @@ resume-${NAME}-all.pdf: resume-${NAME}-all.tex
 
 both: resume-${NAME}-all.pdf
 
+resume-${NAME}-TI.pdf: resume-${NAME}-TI.tex
+	${TEX} resume-${NAME}-TI.tex
 
+ti: resume-${NAME}-TI.pdf
