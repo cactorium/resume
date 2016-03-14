@@ -33,8 +33,7 @@
 }
 
 \newcommand{\education}[4]{
-	\section{Education}
 	\datedsubsection{#1}{#3}
-	Cummulative GPA: #4\hfill Graduating #2
+	Cummulative GPA: #4\hfill #2
 }
 
