@@ -1,7 +1,7 @@
 \documentclass{my_resume}
 \usepackage{hyperref}
 \usepackage[8pt]{extsizes}
-\usepackage[letterpaper, margin=0.25in]{geometry}
+\usepackage[letterpaper, margin=0.125in]{geometry}
 \thispagestyle{empty}
 \input{contactinfo}
 
@@ -9,91 +9,73 @@
 
 \contact{Kelvin Ly}{kelvin.ly1618@gmail.com}{\myphonenumber}
 
-\education{University of Central Florida}{2016-}
-    {PhD, Computer Engineering}{N/A}
+\education{University of Central Florida}{2016-2017}
+    {MS, Computer Engineering}{N/A}
 \education{University of Central Florida}{2011-2015}
-	{BSEE, Electrical Engineering}{3.905, Magna Cum Laude}
+	{BS, Electrical Engineering}{3.905, Magna Cum Laude}
 
 \section{Professional Experience}
-\datedsubsection{University of Central Florida Undergraduate/Graduate Research, Orlando Fl}
-    {November 2015-}
+\datedsubsection{Fluorometric Instruments Design Engineer, Orlando FL}{September 2017 - present}
+\begin{flushleft}
+I am working part time to \textbf{design PCBs} for oxygen sensors.
+I worked on many of the stages of development for a handful of products, including \textbf{design, testing, part sourcing, and assembly}.
+The work involves designing PCBs to fit mechanical and electrical specifications, as well as \textbf{developing firmware and GUIs} for the devices as necessary.
+\end{flushleft}
+\datedsubsection{University of Central Florida Undergraduate/Graduate Researcher, Orlando Fl}
+    {November 2015 - present}
 \begin{flushleft}
 The focus on my research here has been on the security of the \textbf{Internet of Things}, more specifically the development of defenses for IoT devices against attacks.
-Consequently, much of my work so far has been in \textbf{PCB design and assembly} to develop devices to test out security ideas or provide education on hardware security. 
-Designs so far have incorporated \textbf{MSP430} and \textbf{Atmel} microcontrollers, and work is on a new design incorporating the \textbf{CC3200} Wifi SoC.
+Consequently, much of my work so far has been in \textbf{PCB design and assembly} to develop devices to test out security ideas or provide education on hardware security.
+Designs so far have incorporated \textbf{MSP430} and \textbf{Atmel} microcontrollers, along with current work on a primitive \textbf{2.45 GHz radar system} for use in a labmate's project.
+I have also previously worked on our submissions for the \textbf{NYU CSAW Embedded Security Competition} '15, '16, and '17 (winning second and first respectively, no win 2017), which involved the development of \textbf{Verilog} code in \textbf{cryptography and security domains}, along with manipulating PLC code in the last contest.
+These contests led to a wide range of challenges, from writing code to interface with \textbf{MATLAB Simulink} to \textbf{modifying the OpenRISC processor core} and \textbf{patching a GCC backend}.
 I am currently being funded by an \textbf{SRC/Intel fellowship}.
-
-I have also previously worked on our submissions for the \textbf{NYU CSAW Embedded Security Competition} '15 and '16 (winning second and first respectively), which involved the development of \textbf{Verilog} code in
-\textbf{cryptography and security domains}; the first competition involved development a cracker for an election system using homomorphic encryption, the second competition involved modifying an \textbf{OpenRISC}
-processor core to improve security, with matching changes to a \textbf{GCC backend} to allow our security checks to be automatically injected into user land code.
 \end{flushleft}
 \datedsubsection{University of Central Florida Undergraduate Researcher, Orlando FL}
 	{December 2014 - March 2015}
 \begin{flushleft}
-This research experience actually has had so far two major projects. The first
-phase was focused on Working on a \textbf{RAVEN II} medical robot running the
-\textbf{ROS C++} robotics framework. This robot was meant to work as surgery
-robot, with our task being to augment the controls with BCI-based controls to
-improve usability. Unfortunately the robot proved hard to use, and we switched
-over to working in \textbf{signal processing} in \textbf{Python} of EEG data in
-general. Our team has been studying \textbf{feature extraction} and
-\textbf{SSVEP frequency detection} to hopefully advance the state of the art.
-We have used \textbf{emokit} \textbf{Python} library to extract signals from
-Emotiv EEG headset.
+We studied \textbf{feature extraction} from EEG data, focusing on \textbf{SSVEP frequency detection}, using this knowledge in our senior design project, discussed further below.
+We used emokit \textbf{Python} library to extract signals from Emotiv EEG headset.
+Some work was done with the \textbf{RAVEN II} medical robot running software built on the \textbf{ROS robotics framework}.
 \end{flushleft}
 \section{Internships}
 \datedsubsection{IBM Extreme Blue Intern, RTP NC}{May 2015 - August 2015}
 \begin{flushleft}
-Here our team worked on zero knowledge \textbf{encryption} for 
-\textbf{IBM Connections Cloud}. We were the pioneering efforts at this, producing
-a proof of concept to pave the way for the actual Connections team to develop.
-We used \textbf{JavaScript and Node.js} for the server \textbf{backend}, and
-modified and used existing \textbf{Java} and \textbf{Python} code and libraries
-for various parts of the project. Our team was organized around modern programming
-practices, working in an \textbf{agile} team of four, with heavy emphasis on
-\textbf{test coverage} and \textbf{unit testing}.
+Here our team worked on \textbf{on-disk encryption} for \textbf{IBM Connections Cloud}.
+We pioneered work in this direction, producing a proof of concept to pave the way for the actual Connections team to develop.
+We used \textbf{JavaScript and Node.js} for the server \textbf{backend}, and modified existing \textbf{Java} and \textbf{Python} code and libraries for various parts of the project.
+Our team was organized around modern programming practices, working in an \textbf{agile} team of four, with heavy emphasis on \textbf{test coverage} and \textbf{unit testing}.
 \end{flushleft}
 \datedsubsection{Google Software Engineer Intern, Chapel Hill NC}{May 2014 - August 2014}
 \begin{flushleft}
-Here I worked as an intern on the Skia benchmarking team, worked on benchmarking
-framework for \textbf{Skia} rendering engine team. I learned \textbf{Go}, and
-contributed code in \textbf{C++}, \textbf{Python}, and \textbf{Go} for both
-internal and open source projects. This job involved pipelining the gigabytes
-of data being produced daily from test bots into a useful visualization for the
-Skia team.
+I worked on the Skia benchmarking team, providing tooling for \textbf{Skia} rendering engine team.
+This job involved pipelining the gigabytes of data being produced daily from test bots into a useful visualization for the Skia team.
+I learned \textbf{Go}, and contributed code in \textbf{C++}, \textbf{Python}, and \textbf{Go} for both internal and open source projects.
 \end{flushleft}
 \section{Projects}
 \begin{itemize}
-    \item \textbf{UCF Lunar Knights} project, electrical/communications teams
+    \item \textbf{UCF Lunar Knights} project, electrical/communications/software teams
         \begin{itemize}
-            \item Helped with \textbf{wireless communication} with
-                \textbf{Beaglebone Black}
-            \item \textbf{UART} communication with \textbf{Arduino} to send
-                \textbf{PWM} to motor controllers
-            \item Helped in robot assembly, troubleshooting and debugging
-            \item Developing software for \textbf{robot simulation and testing}, mainly through providing wrappers
-              in \textbf{ROS} for \textbf{gazebo}
+          \item Software team lead Fall 2017-Spring 2018, member since 2015
+          \item Helped in robot \textbf{assembly}, \textbf{troubleshooting} and \textbf{debugging}
+          \item Developed software for \textbf{robot simulation and testing}, mainly through providing wrappers
+            in \textbf{ROS} for \textbf{gazebo}
+          \item Designed \textbf{CAN interfacing board} with \textbf{high density connectors} to mate with Nvidia's Jetson TX2
+          \item Led efforts in \textbf{robot autonomous navigation}
         \end{itemize}
     \item Senior design project
         \begin{itemize}
-            \item \textbf{Hardware system design} for all components
-            \begin{itemize}
-                \item Led overall hardware system design
-                \item Designed schematics for all components using \textbf{KiCAD} EDA software
-                \item Converted schematics into PCBs using \textbf{KiCAD}
-            \end{itemize}
-            \item Research into \textbf{signal processing} for \textbf{feature extraction}
-                with respect to applications in \textbf{brain-computer interfaces}
+            \item Led high-level hardware system design
+            \item Designed and layed out circuits for all components using \textbf{KiCAD} EDA software
+            \item Research into \textbf{signal processing} for \textbf{feature extraction} with respect to applications in \textbf{brain-computer interfaces}
             \item Created and designed laser cut design to create gimbal to control wheelchair joystick
             \item Wrote \textbf{assembly} for the \textbf{MSP430} to test the gimbal
         \end{itemize}
 \section{Skills}
-    \item Hobbyist experience with eletronics design and reverse engineering, guitar electronics
+    \item Hobbyist experience with electronics design and reverse engineering, guitar electronics
         repair
     \item Fluent in \textbf{C/C++}, \textbf{Python}, \textbf{Go}, \textbf{Verilog}
-	\item Working knowledge of \textbf{x86}/\textbf{x64}/\textbf{MIPS}/\textbf{MSP430} assembly,
-            \textbf{Java}, \textbf{LaTeX}, \textbf{bash}, \textbf{MATLAB}
-            \textbf{Kicad EDA} Software Suite, \textbf{Multisim}, \textbf{Xilinx ISE}
+    \item Working knowledge of \textbf{x86}/\textbf{x64}/\textbf{MIPS}/\textbf{MSP430} assembly, \textbf{Java}, \textbf{LaTeX}, \textbf{bash}, \textbf{MATLAB}, \textbf{Kicad EDA} Software Suite, \textbf{Multisim}, \textbf{Xilinx ISE}
     \item GitHub user: \url{https://github.com/cactorium}
 \end{itemize}
 \end{document}
