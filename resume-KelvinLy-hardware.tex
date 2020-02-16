@@ -1,11 +1,15 @@
 \documentclass{my_resume}
+\usepackage{longtable}
 \usepackage{hyperref}
 \usepackage[8pt]{extsizes}
 \usepackage[letterpaper, margin=0.25in]{geometry}
 \usepackage{enumitem}
+\usepackage[table]{xcolor}
+
 \thispagestyle{empty}
 \input{contactinfo}
 
+\definecolor{lightgray}{gray}{0.9}
 \begin{document}
 
 \contact{Kelvin Ly}{kelvin.ly1618@gmail.com, \myphonenumber, Orlando, FL}
@@ -16,16 +20,18 @@
 	{BS, Electrical Engineering}{3.905, Magna Cum Laude}
 
 \section{Objectives}
-To begin and pursue a career in electronics engineering or firmware engineering
+To begin and pursue a career in electrical engineering or firmware engineering
 
 \section{Skills}
 \begin{itemize}[noitemsep]
     \item Professional experience in electronics design (mostly \textbf{mixed signal/digital}, a little RF), \textbf{PCB layout} (KiCad, Altium Designer)
-    \item Hobbyist level \textbf{PCB assembly and soldering}, \textbf{SPICE circuit modeling}, and reverse engineering
-    \item Some familiarity with \textbf{I2C}, \textbf{SPI}, \textbf{UART}, \textbf{CAN}, \textbf{SDIO}, \textbf{Ethernet}(10BASE-T), \textbf{on-off keying}, \textbf{PCM}, \textbf{802.11a/b}, \textbf{MIPI CSI}, \textbf{parallel camera interface}, \textbf{JESD204}, \textbf{SerDes}, \textbf{AMBA/AXI}
-    \item Implemented \textbf{I2C}, \textbf{SPI}, \textbf{UART}, \textbf{PWM}, \textbf{VGA}, \textbf{Ethernet RMII}, \textbf{Wishbone} interfaces using FPGA logic (from scratch, clean room implementations from standards)
+    \item Some experience with \textbf{low-noise analog/mixed-signal design}, \textbf{analog filter design}, \textbf{digital signal processing}, \textbf{image processing} (\textbf{CUDA} interoperating with \textbf{OpenCV})
+    \item Hobbyist level \textbf{PCB assembly, reflow, and rework}, \textbf{SPICE circuit modeling}, and reverse engineering (hardware and firmware)
+    \item Some familiarity with \textbf{I2C}, \textbf{SPI}, \textbf{UART}, \textbf{CAN}, \textbf{SDIO}, \textbf{Ethernet}(10BASE-T), \textbf{on-off keying}, \textbf{PCM}, \textbf{802.11a/b}, \textbf{MIPI CSI}, \textbf{parallel camera interface}, \textbf{JESD204}, \textbf{SerDes}, \textbf{AMBA/AXI}, \textbf{DDR1}, \textbf{SPI Flash}, \textbf{Bluetooth Low Energy}, \textbf{I2C-based gyroscopes, accelerometers, magnetometers}, \textbf{USB 1.0}
+    \item Familiarity with \textbf{nRF52}, \textbf{MSP430}, \textbf{PIC12}, \textbf{ATTiny/ATMega}, \textbf{SAM D09} microcontrollers
+    \item Implemented \textbf{I2C}, \textbf{SPI}, \textbf{UART}, \textbf{PWM}, \textbf{VGA}, \textbf{Ethernet RMII}, \textbf{Wishbone} interfaces on FPGA logic
     \item Fluent in \textbf{C99}, \textbf{C++14}, \textbf{Python 2/3}, \textbf{Go}, \textbf{Verilog}
-    \item Working knowledge of \textbf{x86}/\textbf{x64}/\textbf{MIPS}/\textbf{MSP430} assembly, \textbf{Java}, \textbf{LaTeX}, \textbf{MATLAB}, \textbf{Multisim}, \textbf{Xilinx ISE/Vivado}, \textbf{VHDL}, \textbf{Linux} (scripting and low-level userland programming, some kernel module programming), \textbf{JTAG/SWD}
+    \item Working knowledge of \textbf{x86}/\textbf{x64}/\textbf{MIPS}/\textbf{MSP430} assembly, \textbf{Java}, \textbf{LaTeX}, \textbf{MATLAB}, \textbf{Multisim}, \textbf{Xilinx ISE/Vivado}, \textbf{VHDL}, \textbf{Linux} (scripting and low-level userland programming, some kernel module programming), \textbf{JTAG/SWD}, \textbf{TCL}
     % \item GitHub user: \url{https://github.com/cactorium}
 \end{itemize}
 
@@ -91,39 +97,21 @@ To begin and pursue a career in electronics engineering or firmware engineering
 \end{itemize}
 \end{flushleft}
 \section{Notable Projects}
-\begin{itemize}[noitemsep]
-    \item \textbf{UCF Lunar Knights} project, Software team lead Fall 2017-Spring 2018, member since 2015 (Martian robotic mining competition)
-        \begin{itemize}[noitemsep]
-          \item \textbf{Troubleshot and debugged} previous year competition robots, tuning and refining PID controller values to allow responsive robot movement and prevent physical damage to robot frame
-          \item Designed \textbf{CAN interfacing board} with \textbf{high density connectors} to mate with Nvidia's Jetson TX2, allowing native \textbf{CAN bus} access
-          \item Developing software for \textbf{robot simulation and testing} using \textbf{ROS} and \textbf{gazebo}, allowing parallel development of autonomy and robot assembly
-          \item Developing software systems for \textbf{robotic autonomous navigation} and teleoperation, allowing robot functionality for all years of competition
-        \end{itemize}
-      \item Senior design project (mind-controlled wheelchair)
-        \begin{itemize}[noitemsep]
-            \item Led high-level hardware system design
-            \item Designed and layed out circuits for all high-level modules using \textbf{KiCAD} EDA software
-            \item Research into \textbf{signal processing} for \textbf{feature extraction} with respect to applications in \textbf{brain-computer interfaces}
-            % \item Created and designed laser cut design to create gimbal to control wheelchair joystick
-            % \item Wrote \textbf{assembly} for the \textbf{MSP430} to test the gimbal
-        \end{itemize}
-      \item Capacitance-based linear encoder (\url{https://github.com/cactorium/linear-sensors})
-        \begin{itemize}[noitemsep]
-          \item Designed low-noise electronics to amplify and filter weak capacitively coupled signal capable of repeatable measurements to within approximately 0.01 mm
-          \item Developed \textbf{bare metal ARM firmware} to \textbf{digitally process} signal to capture phase information using \textbf{CORDIC}-based algorithms
-        \end{itemize}
-      \item Light-based transmitter and receiver pair (part of in progress project)
-        \begin{itemize}[noitemsep]
-          \item Designed wireless communication using \textbf{BPSK} using white LED as transmitter and visible light photodiode as receiver on custom PCBs
-          \item Developed low noise \textbf{transimpedance amplifier} and op amp gain stages to amplify and filter light signal
-          \item Developed \textbf{bare metal ARM firmware} to \textbf{digitally process} signal to recover data and send to host across custom implementation of \textbf{CDC-ACM USB interface}
-          \item Developed \textbf{low power bare metal MSP430 firmware} to activate based on \textbf{capacitive touch sensing} and transmit encoded IMU data across the light-based wireless channel
-        \end{itemize}
-      \item Custom universal \textbf{motor controller} board, capable of driving brushed DC, BLDC, and stepper motors at 12-18 V, using DI DGD0506A MOSFET \textbf{gate driver} with integrate high-side gate bootstrap (part of in progress project)
-      \item 915 MHz 1 Mbps discrete RF transceiver (in progress)
-        \begin{itemize}[noitemsep]
-          \item Designed transmitter and receiver pair using discrete RF components, including discrete \textbf{LNA} and \textbf{PA} \textbf{transistor stages}
-          \item Developing \textbf{FPGA logic} for \textbf{Lattice iCE40 LP FPGA} to \textbf{package and encode/decode data} into/out of wireless packets, interfacing with custom discrete high-speed DAC and ADC
-        \end{itemize}
-\end{itemize}
+\rowcolors{1}{}{lightgray}
+\begin{longtable}{p{0.2\columnwidth} | p{0.15\columnwidth}  | p{0.15\columnwidth} | p{0.15\columnwidth} | p{0.15\columnwidth}}
+  Project & Software/FPGA & Analog/RF & DSP/Control & Power/Misc \\
+  \hline
+  Reflow oven from toaster (WIP) & PID controller using MSP430 MCU & Temperature reading using thermocouple & - & Mains isolation from controller, zero-crossing gate driver, housing design with emphasis on thermal insulation and even heating \\
+  Guitar looper effects pedal (WIP) & FPGA logic for communicating with DDR DRAM, ADC and DAC & Simple passive filtering, discrete ADC design & Second order $\Sigma - \Delta$ ADC design, simple FIR filtering, DAC implemented on FPGA using PDM (pulse density modulation) & - \\
+  915 MHz 1 Mbps discrete RF transceiver (WIP) & Signal processing on FPGA & Half duplex IQ modulation/demodulation using discrete diode ring mixer, multiple VGA stages, discrete power amplifier design & Error correction, AGC, packet decoding implemented on FPGA & Multi-board design \\
+  Capacitive linear encoder (rev. 3, WIP) & Bare metal ARM coded in C for Microchip SAM D09 & Common mode noise reduction using differential signal along with 5th order Butterworth active filter & Same as before & Use of cheaper op amps based on better noise analysis \\
+  Sensorless brushless DC motor driver for RC plane (WIP) & FOC using Lattice iCE40 FPGA driving TI DRV8353 gate driver & - & State observer and FOC implemented on FPGA & Layout designed for high current, space for heatsinking for MOSFETs \\
+  Visible light transmitter and receiver & Bare metal ARM coded in C, using USB peripheral for data transfer, MSP430-based transmitter, signal processing code written in Python & Transimpedance photodiode front end with several stages of variable gain amplifiers and bandpass filtering & Cortas phase locking loop, software-controlled AGC, BPSK demodulation with CRC checksum, PID-based automatic gain control & Space-constrained, low power transmitter design with capacitive-touch buttons, IMU for position sensing \\
+  RF broadband attenuator blocks & - & RF layout, routing taper design to transition from SMA connector to coplanar waveguide on two-layer FR4 & - & (WIP) Aluminum housing to reduce RF emissions \\
+  144 MHz Yagi-Uda antenna with discrete LNA & LNA designed using Jupyter Notebook, implemented noise calculation code for scikit-rf & Infineon BFU520 based LNA, L-matching networks designed using VNA measurements, antenna tuning and characterization using modified TinyVNA & - & Modified TinyVNA to have lower output power to avoid saturating BFU520 during measurements \\
+  Universal motor controller board & - & - & - & Four H-bridges using DI DGD0506A MOSFET gate drivers \\
+  Capacitive linear encoder (rev. 1/2) & Bare metal ARM coded in C & High impedance front end followed by cascaded active low pass filters into ADC driver & Computationally efficient digital filtering to remove harmonics and calculate phase using CORDIC & - \\
+  Lunar Knights robotics team software lead (UCF) for NASA Mars Rover Competition & Software written in C++ using ROS framework using Jetson TX2, autonomous navigation and teleoperation & - & PID tuning for wheels and digging arm & Mitigated noise on digging arm position potentiometers, wrote code to interface with CAN-based motor controller \\
+  Mind-controlled wheelchair (UCF) & Wheelchair controls implemented on Raspberry Pi 3 & - & Feature extraction from electrodes on scalp, based on steady state visually evoked potential (SSVEP) & Designed laser cut joystick gimbal
+\end{longtable}
 \end{document}
