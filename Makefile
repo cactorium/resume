@@ -16,3 +16,4 @@ $(PDFS): %.pdf: %.tex %.aux
 	${TEX} $<
 
 hardware: resume-${NAME}-hardware.pdf
+software: resume-${NAME}-software.pdf
